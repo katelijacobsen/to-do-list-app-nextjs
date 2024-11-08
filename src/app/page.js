@@ -3,7 +3,7 @@ import ToDoApp from "./components/ToDoApp";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col items-center justify-center">
       <ToDoApp/>
     </main>
   );

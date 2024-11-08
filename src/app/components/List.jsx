@@ -17,7 +17,8 @@ const List = ({ tasks, setTasks }) => {
 
   return (
     <>
-      <h2 className="text-3xl  font-bold">Ongoing Tasks</h2>
+    <h2 className="text-5xl font-bold">List</h2>
+      <h3 className="text-3xl  font-bold">Ongoing Tasks</h3>
       <ul>
         {tasks
           .filter((task) => !task.completed)
@@ -30,7 +31,7 @@ const List = ({ tasks, setTasks }) => {
             />
           ))}
       </ul>
-      <h2 className="text-3xl font-bold">Finished Tasks</h2>
+      <h3 className="text-3xl font-bold">Finished Tasks</h3>
       <ul>
         {tasks
           .filter((task) => task.completed)
