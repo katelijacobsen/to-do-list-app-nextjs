@@ -27,9 +27,10 @@ const List = ({ tasks, setTasks }) => {
       stiffness: 120,
       damping: 20,
       bounce: 3.0,
+      delay: 1,
     }}
     >List</motion.h2>
-      <motion.h3 className="text-3xl  font-bold"
+      <motion.h3 className="text-3xl  font-bold py-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -37,7 +38,7 @@ const List = ({ tasks, setTasks }) => {
         stiffness: 120,
         damping: 50,
         bounce: 3.0,
-        delay: 0.5,
+        delay: 1.7,
       }}>Ongoing Tasks</motion.h3>
       <ul>
         {tasks
@@ -51,7 +52,7 @@ const List = ({ tasks, setTasks }) => {
             />
           ))}
       </ul>
-      <motion.h3 className="text-3xl font-bold"
+      <motion.h3 className="text-3xl font-bold py-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -59,7 +60,7 @@ const List = ({ tasks, setTasks }) => {
         stiffness: 120,
         damping: 50,
         bounce: 3.0,
-        delay: 0.7,
+        delay: 2,
       }}>Finished Tasks</motion.h3>
       <ul>
         {tasks

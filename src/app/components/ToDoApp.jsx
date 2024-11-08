@@ -26,21 +26,30 @@ const ToDoApp = () => {
     }
     return ( 
     <>
-    <form onSubmit={addTask} className="flex flex-col">
+    <motion.form onSubmit={addTask} className="border px-8 py-8"
+    initial= {{width: "0%", opacity: 0}}
+    animate = {{width: "60%", opacity: 1}}
+    transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 25,
+        delay: 0.5
+    }}
+    >
         <List tasks={tasks} setTasks={setTasks}/>
         <motion.input type="text"
         name="task"
         placeholder="Add a new task"
-        className="py-2 px-4 border border-blue-700 rounded"
+        className="py-2 px-4 border border-blue-700 rounded text-blue-700"
         initial={{ width: 0, opacity: 0 }}
         animate={{ width: "100%", opacity: 1 }} 
         transition={{
             type: "spring",
             stiffness: 100,
             damping: 25,
-            delay: 1.5
+            delay: 2.5
         }}/>
-        <motion.button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" initial={{ opacity: 0 }}
+        <motion.button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 border border-blue-700 rounded" initial={{ opacity: 0 }}
         animate={{ opacity: 1 }} 
         transition={{
             type: "spring",
@@ -48,7 +57,7 @@ const ToDoApp = () => {
             damping: 25,
             delay: 3
         }}>Add Task</motion.button>
-    </form>
+    </motion.form>
     </>
     );
 }
