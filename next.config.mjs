@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true, 
   },
-  assetPrefix: isProd ? '/katelijacobsen/' : '',
+  assetPrefix: isProd ? '/to-do-list-app-nextjs/' : '',
   basePath: isProd ? '/to-do-list-app-nextjs' : '',
   output: 'export'
 };
