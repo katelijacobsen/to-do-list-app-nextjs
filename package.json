@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -t true",
     "static": "next build && next export && touch ./out/.nojekyll && echo 'https://katelijacobsen.github.io/to-do-list-app-nextjs/' > ./out/CNAME"
   },
   "dependencies": {
