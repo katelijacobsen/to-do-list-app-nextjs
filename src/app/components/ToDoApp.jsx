@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import List from "./List";
+import { motion } from "framer-motion";
 
 
 const ToDoApp = () => {
@@ -25,10 +26,28 @@ const ToDoApp = () => {
     }
     return ( 
     <>
-    <form onSubmit={addTask}>
+    <form onSubmit={addTask} className="flex flex-col">
         <List tasks={tasks} setTasks={setTasks}/>
-        <input type="text" name="task" placeholder="Add a new task" className="py-2 px-4 border border-blue-700 rounded"/>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Add Task</button>
+        <motion.input type="text"
+        name="task"
+        placeholder="Add a new task"
+        className="py-2 px-4 border border-blue-700 rounded"
+        initial={{ width: 0, opacity: 0 }}
+        animate={{ width: "100%", opacity: 1 }} 
+        transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 25,
+            delay: 1.5
+        }}/>
+        <motion.button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} 
+        transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 25,
+            delay: 3
+        }}>Add Task</motion.button>
     </form>
     </>
     );

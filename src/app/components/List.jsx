@@ -1,3 +1,5 @@
+import React from "react";
+import { motion } from "framer-motion";
 import ListItem from "./ListItem";
 
 const List = ({ tasks, setTasks }) => {
@@ -17,8 +19,26 @@ const List = ({ tasks, setTasks }) => {
 
   return (
     <>
-    <h2 className="text-5xl font-bold">List</h2>
-      <h3 className="text-3xl  font-bold">Ongoing Tasks</h3>
+    <motion.h2 className="text-5xl font-bold"
+    initial={{ scale: 0, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{
+      type: "spring",
+      stiffness: 120,
+      damping: 20,
+      bounce: 3.0,
+    }}
+    >List</motion.h2>
+      <motion.h3 className="text-3xl  font-bold"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 50,
+        bounce: 3.0,
+        delay: 0.5,
+      }}>Ongoing Tasks</motion.h3>
       <ul>
         {tasks
           .filter((task) => !task.completed)
@@ -31,7 +51,16 @@ const List = ({ tasks, setTasks }) => {
             />
           ))}
       </ul>
-      <h3 className="text-3xl font-bold">Finished Tasks</h3>
+      <motion.h3 className="text-3xl font-bold"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 120,
+        damping: 50,
+        bounce: 3.0,
+        delay: 0.7,
+      }}>Finished Tasks</motion.h3>
       <ul>
         {tasks
           .filter((task) => task.completed)
