@@ -1,5 +1,4 @@
 {
-  "homepage": "https://katelijacobsen.github.io/to-do-list-app-nextjs",
   "name": "to-do-list-app-nextjs",
   "version": "0.1.0",
   "private": false,
@@ -8,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "framer-motion": "^11.11.11",
