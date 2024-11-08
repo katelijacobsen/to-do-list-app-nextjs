@@ -29,7 +29,7 @@ const List = ({ tasks, setTasks }) => {
       bounce: 3.0,
       delay: 1,
     }}
-    >List</motion.h2>
+    >Lists</motion.h2>
       <motion.h3 className="text-3xl  font-bold py-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
